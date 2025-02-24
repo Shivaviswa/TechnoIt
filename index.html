@@ -1,1 +1,847 @@
-# TechnoIt
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>techno IT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        background-color: #0a274f;
+    padding: 15px 30px;
+    justify-content: center;
+    gap: 100px;
+    
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    justify-content: flex-start;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav-links a:hover {
+    color: #f8f9fa;
+}
+
+.quote-btn {
+    background: #0265e7;
+    color: white;
+    padding: 13px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.nav-links i {
+    font-size: 20px;
+    color: white;
+    align-content: center;
+    padding-left: 10px;
+}
+.fa-solid  {
+            background-color: white;
+           height: 40px;
+           width: 40px;
+           align-items: center;
+           border-radius: 100px;
+        }
+      
+        .container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            height: 90vh;
+            font-family: Arial, sans-serif;
+           background-color: #0a274f;
+           
+        }
+        .left {
+            background: url(IMG-20250218-WA0014.jpg) center/cover no-repeat;
+            height: 90vh;
+           width: auto;
+        }
+        .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            text-align:justify;
+            color: white;
+            gap: 10px;
+            font-size: larger;
+        }
+        .right h2{
+            color:  #0265e7;
+            font-size: 35px;
+        }
+        .social-icons {
+            margin: 15px 0;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .buttons button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn-primary {
+            background-color: #0265e7;
+            color: white;
+            border-radius: 20px;
+        }
+        .btn-secondary {
+            background-color: #0265e7;
+            color: white;
+            border-radius: 20px;
+        }
+        /* MEDIA QUERIES */
+
+/* For large screens (desktops/laptops) */
+@media screen and (max-width: 1200px) {
+    .navbar {
+        gap: 50px;
+    }
+    .nav-links a {
+        font-size: 14px;
+    }
+    .container {
+        grid-template-columns: 55% 45%;
+    }
+}
+
+/* For tablets (medium screens) */
+@media screen and (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-links li {
+        margin: 5px 0;
+    }
+    .quote-btn {
+        padding: 10px 12px;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .left {
+        height: 50vh;
+    }
+    .right {
+        height: auto;
+        padding: 30px;
+        text-align: center;
+    }
+}
+
+/* For mobile screens */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-links li {
+        margin: 5px 0;
+    }
+    .nav-links a {
+        font-size: 14px;
+    }
+    .quote-btn {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    .fa-solid {
+        height: 30px;
+        width: 30px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .left {
+        height: 40vh;
+    }
+    .right {
+        padding: 20px;
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
+/* For extra small screens */
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 5px;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .nav-links a {
+        font-size: 12px;
+    }
+    .quote-btn {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+    .fa-solid {
+        height: 25px;
+        width: 25px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .left {
+        height: 35vh;
+    }
+    .right {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            justify-content: center;
+            align-items: center;
+          padding-left: 150px;
+          margin: 100px;
+          
+        }
+        .grid-item {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            height: 250px;
+        }
+        .grid-item i {
+            font-size: 50px;
+            color: #007bff;
+        }
+        .grid-item h1 {
+            font-size: 30px;
+            font-weight: lighter;
+            margin: 10px 0;
+            color: #0C54B6;
+        }
+        .grid-item p {
+            font-size: 16px;
+            color: #555;
+            
+        }
+        /* MEDIA QUERIES */
+
+/* Large screens (desktops/laptops) */
+@media screen and (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 50px;
+        margin: 80px auto;
+    }
+    .grid-item {
+        height: 220px;
+    }
+}
+
+/* Medium screens (tablets) */
+@media screen and (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 20px;
+        gap: 15px;
+        margin: 60px auto;
+    }
+    .grid-item {
+        height: 200px;
+        padding: 20px;
+    }
+    .grid-item h1 {
+        font-size: 24px;
+    }
+    .grid-item p {
+        font-size: 14px;
+    }
+    .grid-item i {
+        font-size: 40px;
+    }
+}
+
+/* Small screens (mobile devices) */
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding-left: 10px;
+        margin: 40px auto;
+    }
+    .grid-item {
+        height: auto;
+        padding: 15px;
+    }
+    .grid-item h1 {
+        font-size: 20px;
+    }
+    .grid-item p {
+        font-size: 12px;
+    }
+    .grid-item i {
+        font-size: 35px;
+    }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 5px;
+        padding-left: 5px;
+        margin: 20px auto;
+    }
+    .grid-item {
+        padding: 10px;
+    }
+    .grid-item h1 {
+        font-size: 18px;
+    }
+    .grid-item p {
+        font-size: 12px;
+    }
+    .grid-item i {
+        font-size: 30px;
+    }
+}
+        
+        .footer {
+            background: url(IMG-20250218-WA0014.jpg) no-repeat center center/cover;
+            position: relative;
+            color: white;
+            padding: 90px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: 45%;
+            background-color: rgb(5, 32, 68);
+          
+        }
+
+        .footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Adjust transparency */
+            z-index: 0;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 1;
+            width: 12%;
+            margin-left: 180px;
+        }
+
+        .footer-content h2, 
+        .footer-content h3,
+        .footer-content h1, 
+        .footer-content p {
+            margin: 10px 0;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #1da1f2;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        ul li a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
+            color: #f39c12;
+        }
+        * MEDIA QUERIES */
+
+/* Large screens (Desktops & Laptops) */
+@media screen and (max-width: 1200px) {
+    .footer {
+        background-size: 50%;
+        padding: 70px 20px;
+    }
+    .footer-content {
+        width: 15%;
+        margin-left: 120px;
+    }
+}
+
+/* Medium screens (Tablets) */
+@media screen and (max-width: 992px) {
+    .footer {
+        background-size: cover;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 60px 20px;
+    }
+    .footer-content {
+        width: 60%;
+        margin: 20px 0;
+    }
+}
+
+/* Small screens (Mobile devices) */
+@media screen and (max-width: 768px) {
+    .footer {
+        background-size: cover;
+        text-align: center;
+        padding: 50px 20px;
+    }
+    .footer-content {
+        width: 80%;
+        margin: 10px 0;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Extra small screens (Phones) */
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 40px 15px;
+    }
+    .footer-content {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .social-icons a {
+        font-size: 18px;
+    }
+    ul li {
+        font-size: 14px;
+    }
+}
+        .corner-image {
+            position: absolute;
+            bottom: 80px;
+            left:95%;
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+        }
+        .content{
+        text-align: center;
+    }
+    .content h1{
+        color:#0265E7;
+    }
+    .content{
+        color: #BA987D;
+    }
+        .third-conte {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            max-width:1200px;
+            height: 70vh;
+            background-color: white;
+            padding-left: 300px;
+        }
+        .third {
+            
+            padding: 10px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: right;
+            gap: 20px;
+        }
+        .third div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .third i {
+            font-size: 40px;
+            color: #007bff;
+            margin-right: 15px;
+        justify-items: auto;
+        }
+        
+        .third h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .third p {
+            font-size: 16px;
+            color: #555;
+        }
+        .image-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        * MEDIA QUERIES */
+
+/* Large screens (Desktops & Laptops) */
+@media screen and (max-width: 1200px) {
+    .third-conte {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        padding-left: 100px;
+        height: auto;
+    }
+    .third h1 {
+        font-size: 22px;
+    }
+    .third p {
+        font-size: 14px;
+    }
+    .third i {
+        font-size: 35px;
+    }
+}
+
+/* Medium screens (Tablets) */
+@media screen and (max-width: 992px) {
+    .third-conte {
+        grid-template-columns: 1fr;
+        padding-left: 50px;
+        text-align: center;
+    }
+    .third {
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .third div {
+        align-items: center;
+    }
+    .third h1 {
+        font-size: 20px;
+    }
+    .third p {
+        font-size: 14px;
+    }
+    .third i {
+        font-size: 30px;
+    }
+}
+
+/* Small screens (Mobile devices) */
+@media screen and (max-width: 768px) {
+    .third-conte {
+        grid-template-columns: 1fr;
+        padding-left: 20px;
+    }
+    .third {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .third div {
+        align-items: center;
+    }
+    .third h1 {
+        font-size: 18px;
+    }
+    .third p {
+        font-size: 12px;
+    }
+    .third i {
+        font-size: 25px;
+    }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+    .third-conte {
+        padding-left: 5px;
+    }
+    .third h1 {
+        font-size: 16px;
+    }
+    .third p {
+        font-size: 12px;
+    }
+    .third i {
+        font-size: 22px;
+    }
+}
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="logo-removebg-preview.png" alt="logo"></div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#" class="quote-btn">Get Quotes</a></li>
+            <li><a href=""><i class="fa-solid fa-moon" style="color: #000000;"></i></a></li>
+        </ul>
+    </nav>
+    <div class="container">
+    <div class="left"></div>
+    <div class="right">
+        <h1>Delivering Superior Services</h1>
+        <h2>IT Solutions.</h2>
+        <p>You can Easily change any design to your own.It is also highly <br>customizable SEO friendly template. </p>
+        <div class="social-icons">
+            <i class="fa-brands fa-twitter" style="color:  #0C54B6;"></i>
+            <i class="fa-brands fa-facebook" style="color:  #0C54B6;"></i>
+            <i class="fa-brands fa-linkedin " style="color: #0C54B6;"></i>
+            <i class="fa-brands fa-instagram" style="color: #0C54B6;"></i>
+        </div>
+        <div class="buttons">
+            <button class="btn-primary">Get Quotes</button>
+            <button class="btn-secondary">Get Started</button>
+            
+        </div>
+     
+    </div>
+   
+</div>
+
+<img src="premium_photo-1673792686302-7555a74de717.avif" alt="Corner Image" class="corner-image">
+
+<div class="grid-container">
+    <div class="grid-item">
+        <i class="fa-regular fa-lightbulb" style="color:#0265E7;"></i>
+        <h1>Application Design</h1>
+        <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+    </div>
+    <div class="grid-item">
+        <i class="fa-regular fa-laptop" style="color: #74C0FC;"></i>
+        <h1>Web Hosting</h1>
+        <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+    </div>
+    <div class="grid-item">
+        <i class="fa-solid fa-bullseye" style="color: #74C0FC;"></i>
+        <h1>Social Media</h1>
+        <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+    </div>
+    <div class="grid-item">
+        <i class="fa-solid fa-signal" style="color: #74C0FC;"></i>
+        <h1>SEO Optimization</h1>
+        <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+    </div>
+    <div class="grid-item">
+        <i class="fa-solid fa-cloud" style="color: #74C0FC;"></i>
+        <h1>Cloud Server</h1>
+        <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+    </div>
+    <div class="grid-item">
+        <i class="fa-solid fa-file" style="color: #74C0FC;"></i>
+        <h1>Data Secuity</h1>
+        <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+    </div>
+    
+</div>
+<img src="premium_photo-1673792686302-7555a74de717.avif" alt="Corner Image" class="corner-image">
+
+<div class="content">
+    <h1>Why Choose Us</h1>
+    <p>Lorem ipsum dolor sit amet</p>
+</div>
+<div class="third-conte">
+    <!-- Left Column -->
+    <div class="third let">
+        <div>
+            <h1>Application Design</h1>
+            <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+        </div>
+        <i class="fas fa-home"></i>
+    </div>
+    <div></div>
+    <div class="third">
+        <div>
+            <h1>Application Design</h1>
+            <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+        </div>
+        <i class="fas fa-bell"></i>
+    </div>
+
+    <div class="third">
+        <div>
+            <h1>Application Design</h1>
+            <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+        </div>
+        <i class="fas fa-bell"></i>
+    </div>
+    
+
+    <div class="third image-box">
+        <img src="page 3.png" alt="page3">
+    </div>
+    
+
+   <div class="third">
+        <div>
+            <h1>Application Design</h1>
+            <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+        </div>
+        <i class="fas fa-bell"></i>
+    </div>
+    
+
+    <div class="third">
+        <div>
+            <h1>Application Design</h1>
+            <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+        </div>
+        <i class="fas fa-bell"></i>
+    </div>
+    <div></div>
+    <div class="third">
+        <div>
+            <h1>Application Design</h1>
+            <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+        </div>
+        <i class="fas fa-bell"></i>
+    </div>
+</div>
+<img src="premium_photo-1673792686302-7555a74de717.avif" alt="Corner Image" class="corner-image">
+
+<footer class="footer">
+    <!-- Column 1: Logo, Heading, Paragraph, Social Icons -->
+    <div class="footer-content">
+        <img src="logo.png" alt="Logo" width="120">
+       
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. quibusdam iste, voluptatem possimus ratione, similique.</p>
+        <h2>Follow Us</h2>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+
+    <!-- Column 2: Services List -->
+    <div class="footer-content">
+        <h3>Services</h3>
+        <ul>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">APP Development</a></li>
+            <li><a href="#">Cloud Services</a></li>
+            <li><a href="#">Doamin and Hosting </a></li>
+            <li><a href="#">Seo Optimization </a></li>
+            <li><a href="#">Social Media </a></li>        
+        </ul>
+    </div>
+
+    <!-- Column 3: Information List -->
+    <div class="footer-content">
+        <h3>Information</h3>
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Pricig</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Blogs Details</a></li>
+            <li><a href="#">Coming Soon</a></li>
+
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            
+          
+        </ul>
+    </div>
+
+    <!-- Column 4: Heading and Paragraph -->
+    <div class="footer-content">
+        <a href="#"><i class="fab fa-facebook"></i>101 west town pbo 12345,united Stated</a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+</body>
+</html>
+
